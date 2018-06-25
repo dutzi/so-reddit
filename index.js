@@ -18,7 +18,7 @@ function spawnPost(data) {
   post.querySelector('.excerpt').innerHTML = parseHtml(data.body_html);
   post.querySelector('h3 a').innerText = data.title;
   debugger;
-  post.querySelector('h3 a').href = '/comment.html#' + data.permalink;
+  post.querySelector('h3 a').href = '/so-reddit/comment.html#' + data.permalink;
   post.querySelector('.user-details a').innerText = data.author;
   post.querySelector('.vote-count-post strong').innerText = data.score;
   post.querySelector('.gravatar-wrapper-32 img').src = `https://www.gravatar.com/avatar/${md5(data.author)}?s=32&d=identicon&r=PG`;
