@@ -79,10 +79,8 @@ function updateSortMenu() {
 
 function fetchPosts() {
   fetch(
-    `${BASE_URL}/${getSubreddit()}/${getSortMethod()}.json`.replace(
-      /\/\//g,
-      "/"
-    )
+    BASE_URL +
+      `/${getSubreddit()}/${getSortMethod()}.json`.replace(/\/\//g, "/")
   )
     .then((res) => res.json())
     .then((res) => {
