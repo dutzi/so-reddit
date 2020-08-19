@@ -58,6 +58,15 @@ function getSortMethod() {
   }
 }
 
+function getSubreddit() {
+  const subreddit = location.hash.split("/")[2];
+  if (subreddit) {
+    return "r/" + subreddit;
+  } else {
+    return "";
+  }
+}
+
 function updateSortMenu() {
   Array.from(document.querySelectorAll('[id^="sort"]')).forEach((node) =>
     node.classList.remove("is-selected")
@@ -69,7 +78,12 @@ function updateSortMenu() {
 }
 
 function fetchPosts() {
-  fetch(`${BASE_URL}${getSortMethod()}.json`)
+  fetch(
+    `${BASE_URL}/${getSubreddit()}/${getSortMethod()}.json`.replace(
+      /\/\//g,
+      "/"
+    )
+  )
     .then((res) => res.json())
     .then((res) => {
       res.data.children.forEach((post) => {
