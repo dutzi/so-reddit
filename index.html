@@ -312,7 +312,7 @@ Home        </a>
                             <li class="fs-fine tt-uppercase ml8 mt16 mb4 fc-light">Public</li>
                             <li class=" youarehere">
         <a id="nav-questions"
-            href="/questions"
+            href="#/"
             class="pl8 js-gps-track nav-links--link -link__with-icon"
 
             data-gps-track="top_nav.click({is_current:true, location:3, destination:1})">
@@ -322,11 +322,11 @@ Home        </a>
 
     <li>
         <a id="nav-tags"
-            href="/tags"
+            href="#/r/askreddit"
             class=" js-gps-track nav-links--link"
 
             data-gps-track="top_nav.click({is_current:false, location:3, destination:2})">
-Tags        </a>
+AskReddit        </a>
     </li>
     <li>
         <a id="nav-users"
@@ -394,12 +394,12 @@ Jobs        </a>
                 <div class="grid--cell">
 
 <div class="grid tabs-filter s-btn-group tt-capitalize">
-        <a class="youarehere is-selected grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/questions?sort=newest" data-nav-xhref="" title="The most recently asked questions" data-value="newest" data-shortcut="N">
-            newest</a>
-        <a class="grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/questions?sort=featured" data-nav-xhref="" title="Questions with open bounties" data-value="featured" data-shortcut="E">
-<span class="bounty-indicator-tab">381</span>            featured</a>
-        <a class="grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/questions?sort=frequent" data-nav-xhref="" title="Questions with the most links" data-value="frequent" data-shortcut="F">
-            frequent</a>
+        <a id="sort-hot" class="is-selected grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/#hot" onclick="handleSortMenuClick(event)" data-nav-xhref="" title="The most recently asked questions" data-value="newest" data-shortcut="N">
+            hot</a>
+        <a id="sort-top" class="grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/#top" onclick="handleSortMenuClick(event)" data-nav-xhref="" title="Questions with open bounties" data-value="featured" data-shortcut="E">
+<span class="bounty-indicator-tab">381</span>            top</a>
+        <a id="sort-new" class="grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/#new" onclick="handleSortMenuClick(event)" data-nav-xhref="" title="Questions with the most links" data-value="frequent" data-shortcut="F">
+            new</a>
         <a class="grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/questions?sort=votes" data-nav-xhref="" title="Questions with the most votes" data-value="votes" data-shortcut="V">
             votes</a>
         <a class="grid--cell s-btn s-btn__muted s-btn__outlined py8 ws-nowrap" href="/questions?sort=active" data-nav-xhref="" title="Questions that have recent activity" data-value="active" data-shortcut="A">
